@@ -1,0 +1,15 @@
+pandas
+matplotlib
+ipywidgets
+python-dotenv
+
+pypdf
+tiktoken
+textract
+
+langchain==0.0.150
+llama-index
+transformers
+sentence_transformers
+openai
+faiss-cpu
