@@ -106,6 +106,7 @@ if __name__ == '__main__':
     # query = 'What is the copay for Diagnostic test?'
     # query = 'what is my out of pocket limit?'
     # query = 'what is the radiology cost for having a baby'
+    # query = how much will be my radiology cost for new born baby?
 
     css='''
     #col-container {max-width: 700px; margin-left: auto; margin-right: auto;}
@@ -125,7 +126,7 @@ if __name__ == '__main__':
             
             with gr.Column():
                 pdf_doc = gr.File(label='Load a pdf', file_types=['.pdf'], type='file')
-                repo_id = gr.Dropdown(label='LLM', choices=['google/flan-t5-large', 'microsoft/prophetnet-large-uncased'], value='google/flan-t5-large')
+                repo_id = gr.Dropdown(label='LLM', choices=['google/flan-t5-large', 'bigscience/mt0-large', 'microsoft/prophetnet-large-uncased', 'bigscience/T0_3B'], value='google/flan-t5-large')
                 with gr.Row():
                     langchain_status = gr.Textbox(label='Status', placeholder='', interactive=False)
                     load_pdf = gr.Button('Process PDF')
